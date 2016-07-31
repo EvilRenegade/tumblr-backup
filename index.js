@@ -88,7 +88,7 @@ switch (command) {
             };
 
             var p = function(html){
-                return html.replace("<!-- more -->", "<hr class='more' />").replace(/https?:\/\/[0-9\.]+media\.tumblr\.com\/[^ \"]+/g, ip);
+                return (html === undefined) ? "" : html.replace("<!-- more -->", "<hr class='more' />").replace(/https?:\/\/[0-9\.]+media\.tumblr\.com\/[^ \"]+/g, ip);
             };
 
             var d = function(c){
